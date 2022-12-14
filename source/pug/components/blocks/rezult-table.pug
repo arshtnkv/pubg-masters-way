@@ -1,0 +1,35 @@
+mixin rezult-table(data)
+  .rezult-table(data-table)
+    table
+      thead
+        tr
+          th
+            span !{data.heads.count}
+          th
+            span !{data.heads.teams}
+          th
+            span !{data.heads.games}
+          th
+            span !{data.heads.score}
+          th
+            span !{data.heads.kills}
+      each line in data.lines
+        tr
+          td
+            span !{line.teamNumber}
+          td
+            .team
+              .team-logo
+                +img(line.team.logo.path, line.team.logo.name, line.team.logo.format, line.team.logo.width, line.team.logo.height, line.team.logo.altText)
+              span.team__name !{line.team.name}
+          td
+            span.team-total !{line.countGame}
+          td
+            span.team-score !{line.total}
+          td
+            span.team-kills !{line.kills}
+    .rezult-table__controls
+      button.table-control.table-control--prev.btn.btn--table.btn--bg-white.is-active(type="button" aria-label="вперёд")
+        span.visually-hidden Вперёд
+      button.table-control.table-control--next.btn.btn--table.btn--bg-white(type="button" aria-label="назад" aria-)
+        span.visually-hidden Назад

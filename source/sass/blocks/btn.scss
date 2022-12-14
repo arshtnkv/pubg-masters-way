@@ -1,0 +1,139 @@
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  color: inherit;
+  border: none;
+  user-select: none;
+  transition: background-color $trans-default, opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.6;
+  }
+
+  &--big {
+    justify-content: center;
+    align-items: center;
+    max-width: 351px;
+    width: 100%;
+    padding: 9px 20px;
+    min-height: 66px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 900;
+    border-radius: 20px;
+    text-align: center;
+
+    @include vp-767 {
+      min-height: 46px;
+      font-size: 11px;
+      line-height: 12px;
+    }
+  }
+
+  &--discord-small {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    min-height: 46px;
+    padding: 9px 20px;
+    border-radius: 10px;
+
+    @include vp-767 {
+      width: 122px;
+      min-height: 34px;
+      padding: 4px 5px;
+    }
+  }
+
+  &--discord-big {
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    min-height: 49px;
+
+    @include vp-767 {
+      width: 43px;
+      height: 12px;
+      min-height: 12px;
+    }
+  }
+
+  &--image-small{
+    img {
+      width: 103px;
+      height: 28px;
+
+      @include vp-767 {
+        width: 92px;
+        height: 25px;
+      }
+    }
+  }
+
+  &--image-big {
+    img {
+      width: 180px;
+      height: 49px;
+
+      @include vp-767 {
+        width: 43px;
+        height: 12px;
+      }
+    }
+  }
+
+  &--download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    min-height: 36px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 5px;
+
+    @include vp-767 {
+      border-radius: 15px;
+    }
+  }
+
+  &--table {
+    width: 40px;
+    height: 3px;
+
+    &.is-active {
+      pointer-events: none;
+      background-color: $color-fire-engine-red;
+    }
+  }
+
+  &--bg-white {
+    background-color: $color-default-white;
+  }
+
+  &--bg-red {
+    background-color: $color-fire-engine-red;
+
+    @include hover-focus {
+      background-color: lighten($color-fire-engine-red, 4);
+      opacity: 1;
+    }
+  }
+
+  &--bg-transparent {
+    background-color: transparent;
+  }
+
+  &--no-padding {
+    padding: 0;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

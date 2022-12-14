@@ -1,0 +1,51 @@
+mixin regulations()
+  -
+    const regulations = {
+      title: 'Правила',
+      bg: {
+        path: 'content/regulations',
+        name: 'bg',
+        format: 'png',
+        width: 1920,
+        height: 1128,
+        altText: "background"
+      },
+      list: [
+        {
+          title: '01 I Определения',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias rem totam cumque officia modi voluptatem aut, facere voluptate nam, tenetur blanditiis error neque minus sunt eos sed adipisci magni! Quod, nesciunt harum?'
+        },
+        {
+          title: '01 I Определения',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias rem totam cumque officia modi voluptatem aut, facere voluptate nam, tenetur blanditiis error neque minus sunt eos sed adipisci magni! Quod, nesciunt harum?'
+        },
+        {
+          title: '01 I Определения',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias rem totam cumque officia modi voluptatem aut, facere voluptate nam, tenetur blanditiis error neque minus sunt eos sed adipisci magni! Quod, nesciunt harum?'
+        }
+      ]
+    };
+
+  section.regulations
+    +background(regulations.bg)
+    .container
+      h1.regulations__title.title.title--h1 !{regulations.title}
+      .regulations__droptabs.droptabs
+        .droptabs__wrapper
+          .droptabs__dropdown
+            button.droptabs__trigger(type="button") Опредиления
+              +icon("polygon", 14, 7)
+            .droptabs__controls
+              button.droptabs__control.is-active(type="button" aria-label="Определения") Определения
+              button.droptabs__control(type="button" aria-label="Участники турнира") Участники турнира
+              button.droptabs__control(type="button" aria-label="Правила турнира") Правила турнира
+              button.droptabs__control(type="button" aria-label="Формат") Формат
+        .droptabs__content
+          .droptabs__element.is-active
+            +slider(regulations.list, "default")
+          .droptabs__element
+            h2 Участники турнира
+          .droptabs__element
+            h2 Правила турнира
+          .droptabs__element
+            h2 Формат

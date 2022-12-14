@@ -1,0 +1,14 @@
+mixin go-to-discord()
+  .go-to-discord
+    .container
+      p.go-to-discord__text Ответ на&nbsp;любой вопрос о&nbsp;турнире ты&nbsp;можешь получить в&nbsp;Discord-канале
+      +icon('arrows-right', 37, 56)
+      +btn({
+        href: '#',
+        imgPath: 'content',
+        imgName: 'discord',
+        imgFormat: 'png',
+        imgWidth: 103,
+        imgHeight: 28,
+        imgAltText: 'content',
+      })(aria-label="Ссылка на discord канал").btn--discord-big.btn--bg-transparent.btn--image-big

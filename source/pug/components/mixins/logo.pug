@@ -1,0 +1,7 @@
+mixin logo(data, currentUrl)
+  if(currentUrl === "index.html")
+    span.header__logo.is-active
+      +img(data.path, data.name, data.format, data.width, data.height, data.altText)
+  else
+    a.header__logo(href="index.html", aria-label="Переход на главную")
+      +img(data.path, data.name, data.format, data.width, data.height, data.altText)

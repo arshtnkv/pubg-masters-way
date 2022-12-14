@@ -1,0 +1,37 @@
+mixin form-register()
+  .form-register&attributes(attributes)
+    h3.form-register__title Сбор информации об участниках PUBG Mobile Masters Way
+    p.form-register__necessarily * Обязательно
+    form(action="#" method="POST")
+      .form-register__half-width
+        +custom-input({inputLabel: "Discord <span>(Пример: D.Novo#5566)</span> <i>*</i>", inputName: "discord", inputPlaceholder: 'Мой ответ', inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")
+        .form-register__discord
+          span.form-register__discord-text Либо авторизуйтесь, чтобы заполнить поле автоматически
+          +btn({
+            href: '#',
+            imgPath: 'content',
+            imgName: 'discord',
+            imgFormat: 'png',
+            imgWidth: 103,
+            imgHeight: 28,
+            imgAltText: 'discord',
+          })(aria-label="Ссылка на discord канал").btn--discord-small.btn--bg-red.btn--image-small
+
+      .form-register__inputs
+        +custom-input({inputLabel: "Игровой ник <span class='color-red'>*</span>", inputName: "game-nickname", inputPlaceholder: 'Мой ответ', inputMinLength: "2"})
+
+        +custom-input({inputLabel: "Фамилия Имя Отчество на русском языке <span>(Пример: Иванов Алексей Петрович)</span> <span class='color-red'>*</span>", inputName: "fio", inputPlaceholder: 'Мой ответ', inputMinLength: "2"})(data-limitations="letters")
+
+        +custom-input({inputLabel: "PUBG Mоbile UID <span class='color-red'>*</span>", inputName: "pubg-uid", inputPlaceholder: 'Мой ответ', inputMinLength: "2"})(data-limitations="letters")
+
+        +custom-input({inputLabel: "Электронная почта <span class='color-red'>*</span>", inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")
+
+        +custom-input({inputLabel: "Контактный номер телефона <span class='color-red'>*</span>", inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")
+
+      +appgallery-qualification()
+      .form-register__submit
+        +btn({text: 'готово', type: 'submit'}).btn--bg-red
+
+
+
+

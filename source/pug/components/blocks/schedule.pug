@@ -1,0 +1,483 @@
+mixin schedule()
+  -
+    const schedule = {
+      title: 'Расписание',
+      bg: {
+        path: 'content/schedule',
+        name: 'bg',
+        format: 'png',
+        width: 1920,
+        height: 1521,
+        altText: 'background'
+      },
+    };
+
+  -
+    const gameTables = [
+      {
+        mod: 'game',
+        trigger: {
+          name: 'Группа А',
+          desc: NaN,
+          icon: NaN,
+        },
+        heads: ["Дата", "Время", "Матч"],
+        lines: [
+          {
+            date: '4 июля',
+            time: "16:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "17:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "18:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "19:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "20:00",
+            match: 'Раунд 1'
+          },
+        ]
+      },
+      {
+        mod: 'game',
+        trigger: {
+          name: 'В эфире',
+          desc: 'Даты',
+          icon: {
+            path: "content",
+            name: "play",
+            format: "png",
+            width: 18,
+            height: 18,
+            altText: "icon play"
+          },
+        },
+        heads: ["Дата", "Время", "Матч"],
+        lines: [
+          {
+            date: '4 июля',
+            time: "16:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "17:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "18:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "19:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "20:00",
+            match: 'Раунд 1'
+          },
+        ]
+      },
+      {
+        mod: 'game',
+        trigger: {
+          name: 'Завершен',
+          desc: '(18-20 ноября)',
+          icon: {
+            path: "svg",
+            name: "check",
+            format: "svg",
+            width: 18,
+            height: 18,
+            altText: "icon check"
+          },
+        },
+        heads: ["Дата", "Время", "Матч"],
+        lines: [
+          {
+            date: '4 июля',
+            time: "16:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "17:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "18:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "19:00",
+            match: 'Раунд 1'
+          },
+          {
+            date: '4 июля',
+            time: "20:00",
+            match: 'Раунд 1'
+          },
+        ]
+      },
+    ];
+
+  -
+    const rezultTables = [
+      {
+        mod: 'rezult',
+        trigger: {
+          name: 'Плей ин',
+          desc: 'Даты',
+          icon: NaN,
+        },
+        heads: {
+          count: '#',
+          teams: 'Команды',
+          games: 'Игры',
+          score: 'Общий счёт',
+          kills: 'Убийства'
+        },
+        lines: [
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+        ]
+      },
+      {
+        mod: 'rezult',
+        trigger: {
+          name: 'В эфире',
+          desc: 'Даты',
+          icon: {
+            path: "content",
+            name: "play",
+            format: "png",
+            width: 18,
+            height: 18,
+            altText: "icon play"
+          },
+        },
+        heads: {
+          count: '#',
+          teams: 'Команды',
+          games: 'Игры',
+          score: 'Общий счёт',
+          kills: 'Убийства'
+        },
+        lines: [
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+        ]
+      },
+      {
+        mod: 'rezult',
+        trigger: {
+          name: 'Завершён',
+          desc: 'Даты',
+          icon: {
+            path: "svg",
+            name: "check",
+            format: "svg",
+            width: 18,
+            height: 18,
+            altText: "icon check"
+          },
+        },
+        heads: {
+          count: '#',
+          teams: 'Команды',
+          games: 'Игры',
+          score: 'Общий счёт',
+          kills: 'Убийства'
+        },
+        lines: [
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+          {
+            teamNumber: 1,
+            team: {
+              name: 'Five Dealy Sins',
+              logo: {
+                path: 'content',
+                name: 'logo-team',
+                format: 'png',
+                width: 40,
+                height: 50,
+                altText: 'logo-team',
+              },
+            },
+            countGame: 40,
+            total: 420,
+            kills: 40
+          },
+        ]
+      },
+    ];
+
+  section.schedule
+    +background(schedule.bg)
+    .container
+      .schedule__tabs.tabs(data-tabs="parent")
+        .schedule__wrapper
+          h1.schedule__title.title.title--h1 !{schedule.title}
+          .tabs__controls(data-tabs="controls")
+            button.tabs__control(type="button" aria-label="Игры" data-tabs="control") Игры
+            button.tabs__control(type="button" aria-label="Результаты" data-tabs="control") Результаты
+        .tabs__content(data-tabs="content")
+          .tabs__element(data-tabs="element")
+            .schedule__tables
+              each table in gameTables
+                +accordion(table, "schedule")
+          .tabs__element(data-tabs="element")
+            .schedule__tables
+              each table in rezultTables
+                +accordion(table, "schedule")
+

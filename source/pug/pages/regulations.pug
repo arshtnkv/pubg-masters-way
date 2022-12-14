@@ -1,0 +1,17 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Правила"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = false
+  - const footerMods = ""
+  - const hasGoToDiscord = true
+  - const currentUrl = "regulations.html"
+
+block main
+  main
+    +regulations()
+    +news()
+    +go-to-discord()

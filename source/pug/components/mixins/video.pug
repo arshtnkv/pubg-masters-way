@@ -1,0 +1,8 @@
+mixin video(data={})
+  - const {width, height, title, id, video} = data.video
+  - const {path, image, format, imgWidth, imgHeight, altText} = data.img
+
+  .video(class!=attributes.class)
+    .video__iframe(data-video=video, data-id=id, data-width=width, data-height=height, data-cover="img/" + path + "/" + image + "." + format)
+
+

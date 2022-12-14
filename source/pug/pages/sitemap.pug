@@ -1,0 +1,91 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Список страниц"
+
+block main
+  style.
+    .container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      color: rgb(255, 255, 255);
+    }
+
+    h1 {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    a {
+      color: rgb(255, 255, 255);
+    }
+
+    li {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 7px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 100px;
+      height: auto;
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      ol {
+        padding-left: 20px;
+      }
+
+      ol li {
+        margin-bottom: 15px;
+      }
+    }
+
+  -
+    const pages = [
+      {
+        name: "UI-kit — ui-kit.html",
+        src: "ui-kit.html"
+      },
+      {
+        name: "Главная — index.html",
+        src: "index.html"
+      },
+      {
+        name: "Команды — teams.html",
+        src: "teams.html"
+      },
+      {
+        name: "Расписание — schedule.html",
+        src: "schedule.html"
+      },
+      {
+        name: "Правила — regulations.html",
+        src: "regulations.html"
+      },
+      {
+        name: "FAQ — faq.html",
+        src: "faq.html"
+      },
+      {
+        name: "Новости — news.html",
+        src: "news.html"
+      },
+    ]
+
+  main
+    .container
+      +img("content", "logo", "png", 100, 91, "Логотип проекта")
+      h1 Список страниц
+      ol
+        each page in pages
+          li
+            a(href= page.src)= page.name

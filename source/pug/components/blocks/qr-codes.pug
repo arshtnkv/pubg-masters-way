@@ -1,0 +1,7 @@
+mixin qr-codes(data)
+  .qr-codes&attributes(attributes)
+    ul.qr-codes__list
+      each qr in data
+        li.qr-codes__item
+          h3.qr-codes__title.title.title--h3 !{qr.title}
+          +icon(qr.name, qr.width, qr.height)

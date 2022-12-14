@@ -1,0 +1,18 @@
+.teams {
+  position: relative;
+
+  & .container--sm {
+    padding-top: 141px;
+    padding-bottom: 173px;
+
+    @include vp-767 {
+      padding-top: 39px;
+      padding-bottom: 39px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 38px;
+    line-height: normal;
+  }
+}

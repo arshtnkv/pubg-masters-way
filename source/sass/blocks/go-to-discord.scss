@@ -1,0 +1,55 @@
+.go-to-discord {
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    @include vp-767 {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__text {
+    max-width: 550px;
+    margin: 0;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-right: 20px;
+
+    @include vp-767 {
+      font-size: 6px;
+      line-height: 6px;
+    }
+  }
+
+  &__link {
+    flex-shrink: 0;
+
+    img {
+      width: 180px;
+      height: 49px;
+
+      @include vp-767 {
+        width: 43px;
+        height: 12px;
+      }
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 57px;
+    height: 57px;
+    margin-right: 20px;
+
+    @include vp-767 {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

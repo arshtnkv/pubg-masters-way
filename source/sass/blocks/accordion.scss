@@ -1,0 +1,275 @@
+.accordion {
+  margin: 0 auto 37px auto;
+
+  @include vp-767 {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & & {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__element:last-child {
+    margin-bottom: 0;
+  }
+
+  &__element {
+    margin-bottom: 34px;
+  }
+
+  &__button {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+
+    color: $color-default-white;
+    background-color: rgba($color-default-black, .5);
+    border: none;
+    border-radius: 15px 15px 0 0;
+    text-transform: uppercase;
+    overflow: hidden;
+
+    @include vp-767 {
+      padding: 17px;
+      border-radius: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-default-white;
+      filter: blur(150px);
+      z-index: -1;
+    }
+  }
+
+  &--team {
+    &:first-child {
+      @include vp-767 {
+        border-top: 2px solid $color-bunker;
+      }
+    }
+
+    .accordion {
+      &__button {
+        padding-right: 30px;
+        font-size: 40.5px;
+        line-height: 48px;
+        font-weight: 900;
+        background-color: rgba($color-default-black, .8);
+        border-radius: 15px;
+
+        @include vp-767 {
+          min-height: 63px;
+          padding: 5px 80px 5px 20px;
+          font-size: 16px;
+          line-height: 16px;
+          border-bottom: 2px solid $color-bunker;
+          border-radius: 0;
+        }
+      }
+
+      &__button-wrapper {
+        @include vp-767 {
+          display: flex;
+          align-items: center;
+        }
+
+        img {
+          flex-shrink: 0;
+          display: none;
+          width: 40px;
+          height: auto;
+          margin-right: 20px;
+
+          @include vp-767 {
+            display: block;
+          }
+        }
+      }
+
+      &__button-icon {
+        position: absolute;
+        top: 25px;
+        right: 40px;
+        width: 20px;
+        height: 20px;
+        transition: transform $trans-default;
+
+        @include vp-767 {
+          top: 20px;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: $color-default-white;
+          transition: opacity $trans-default;
+        }
+
+        &::before {
+          top: 7px;
+          right: 1px;
+          width: 15px;
+          height: 4px;
+
+          @include vp-767 {
+            top: 9px;
+            right: 4px;
+            width: 11px;
+            height: 4px;
+          }
+        }
+
+        &::after {
+          top: 2px;
+          right: 7px;
+          width: 4px;
+          height: 15px;
+
+          @include vp-767 {
+            top: 5px;
+            right: 8px;
+            width: 4px;
+            height: 11px;
+          }
+        }
+      }
+
+      &__element.is-active .accordion__button {
+        border-radius: 15px 15px 0 0;
+
+        @include vp-767 {
+          border-radius: 0;
+        }
+      }
+
+      &__element.is-active .accordion__button-icon {
+        transform: rotate(90deg);
+      }
+
+      &__element.is-active .accordion__button-icon::before {
+        opacity: 0;
+      }
+    }
+  }
+
+  &--schedule {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    .accordion {
+      &:first-child {
+        border: none;
+      }
+
+      &__button {
+        display: flex;
+        align-items: center;
+        padding: 23px 30px;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: normal;
+        text-transform: initial;
+        background-color: $color-fire-engine-red;
+        border-radius: 15px;
+
+        @include vp-767 {
+          padding-left: 14px;
+          font-size: 16px;
+          line-height: 16px;
+        }
+
+        svg {
+          flex-shrink: 1;
+          width: 8px;
+          height: 14px;
+          margin-left: auto;
+          transition: transform $trans-default;
+        }
+
+        img {
+          width: 18px;
+          height: 18px;
+          margin-left: 12px;
+
+          @include vp-767 {
+            margin-left: 5px;
+          }
+        }
+      }
+
+      &__button-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      &__button-desc {
+        position: relative;
+        padding-left: 20px;
+        margin-left: 36px;
+
+        @include vp-767 {
+          padding-left: 10px;
+          margin-right: 10px;
+          margin-left: 20px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -5px;
+          left: 0;
+          width: 1px;
+          height: 27px;
+          background-color: $color-default-white;
+        }
+      }
+
+      &__element.is-active {
+        .accordion__button {
+          background-color: rgba($color-default-black, .5);
+          border-radius: 15px 15px 0 0;
+
+          @include vp-767 {
+            background-color: $color-blue-charcoal;
+          }
+
+          svg {
+            color: $color-fire-engine-red;
+            transform: rotate(90deg);
+          }
+        }
+
+        .accordion__button svg {
+          border-radius: 15px 15px 0 0;
+        }
+
+        // .accordion__content {
+        //   padding-top: 20px;
+        // }
+      }
+
+      // &__content {
+      //   background-color: rgba($color-default-black, .5);
+      //   border-radius: 0 0 15px 15px;
+
+      //   @include vp-767 {
+      //     padding-top: 0;
+      //   }
+      // }
+    }
+  }
+}

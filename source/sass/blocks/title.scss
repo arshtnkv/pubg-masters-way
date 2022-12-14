@@ -1,0 +1,76 @@
+.title {
+  margin: 0;
+  font-family: $ff-dinpro;
+  font-weight: 900;
+  color: inherit;
+  text-transform: uppercase;
+
+  &--h1 {
+    font-size: 89px;
+    line-height: 73px;
+    display: flex;
+
+    @include vp-767 {
+      font-size: 37px;
+      line-height: 30px;
+    }
+
+    span {
+      font-size: 39px;
+      line-height: 36.5px;
+      color: $color-default-white;
+
+      @include vp-767 {
+        font-size: 16px;
+        line-height: 15px;
+      }
+    }
+  }
+
+  &--h2 {
+    font-size: 89px;
+    line-height: 1;
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 24px;
+    }
+  }
+
+  &--h3 {
+    font-size: 39px;
+    line-height: normal;
+
+    @include vp-767 {
+      font-size: 19px;
+    }
+  }
+
+  &--h4 {
+    font-size: 24px;
+    line-height: 28px;
+
+    @include vp-767 {
+      font-size: 8.5px;
+      line-height: 10px;
+    }
+  }
+
+  &--h5 {
+    font-size: 19.5px;
+    line-height: 21.5px;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 8px;
+    }
+  }
+
+  &--color-red {
+    color: $color-fire-engine-red;
+  }
+
+  &--color-white {
+    color: $color-default-white;
+  }
+}

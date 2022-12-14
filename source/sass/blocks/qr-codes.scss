@@ -1,0 +1,49 @@
+.qr-codes {
+  @media (max-width: 800px) {
+    display: none;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 581px;
+    // width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include vp-1239 {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 204px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include vp-1239 {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    svg {
+      padding: 2px;
+      width: 204px;
+      height: 204px;
+      background-color: $color-default-white;
+    }
+  }
+}

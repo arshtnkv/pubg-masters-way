@@ -1,0 +1,92 @@
+.tabs {
+  max-width: 100%;
+
+  &__controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: 40px;
+
+    @include vp-767 {
+      align-items: stretch;
+      margin-top: -20px;
+    }
+  }
+
+  &__control {
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 9px 16px;
+    margin: 0;
+    margin: 15px 15px 0 0;
+    min-width: auto;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 900;
+    color: $color-default-white;
+    background-color: transparent;
+    border: 2px solid $color-fire-engine-red;
+    border-radius: 10px;
+    transition: border-color $trans-default;
+
+    @include vp-767 {
+      padding: 10px;
+      width: 45%;
+      min-height: 39px;
+      padding: 5px;
+      margin: 20px 20px 0 0;
+      font-size: 12px;
+      line-height: 12px;
+      border-radius: 13.5px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @include hover-focus {
+      border-color: lighten($color-fire-engine-red, 10);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.is-active {
+      opacity: 1;
+      pointer-events: none;
+      background-color: $color-fire-engine-red;
+    }
+  }
+
+  &__content {
+    transition: height 0.3s;
+  }
+
+  &__element {
+    width: 100%;
+
+    p {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+
+  &--unset {
+    .tabs__content {
+      height: 100px;
+    }
+
+    .tabs__element {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}

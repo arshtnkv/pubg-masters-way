@@ -1,0 +1,23 @@
+mixin team-table(data)
+  .team-table
+    table
+      thead
+        tr
+          each th in data.heads
+            th
+              span.team-table__title !{th}
+      each line in data.lines
+        tr
+          td
+            .team-avatar
+              +img(line.avatar.path, line.avatar.name, line.avatar.format, line.avatar.width, line.avatar.height, line.avatar.altText)
+          td
+            span.team-username !{line.username}
+            if(line.description)
+              span.team-description !{line.description}
+            if(line.kills)
+              .team-kills
+                span.team-kills-text !{line.kills.text}
+                span.team-kills-count !{line.kills.count}
+          td
+            span !{line.kills.count}

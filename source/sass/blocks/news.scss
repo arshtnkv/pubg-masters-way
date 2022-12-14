@@ -1,0 +1,22 @@
+.news {
+  position: relative;
+
+  & .container {
+    padding-top: 224px;
+    padding-bottom: 149px;
+
+    @include vp-767 {
+      padding-top: 19px;
+      padding-bottom: 31px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include vp-767 {
+      margin-bottom: 17px;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+mixin intro()
+  -
+    const intro = {
+      title: 'Pubg<br>Mobile <span>Masters<br>Way</span>',
+      prizeFound: '10 000 $',
+      date: '12 - 27 ноября',
+      bg: {
+        path: 'content/intro',
+        name: 'bg-intro',
+        format: 'png',
+        width: 1920,
+        height: 719,
+        altText: 'background',
+      },
+      qrCodes: [
+        {
+          title: 'Россия',
+          name: 'qr-rus',
+          width: 204,
+          height: 204
+        },
+        {
+          title: 'Страны снг',
+          name: 'qr-sng',
+          width: 204,
+          height: 204
+        },
+      ],
+      links: [
+        {
+          href: 'https://vk.com/gameclub_mobile',
+          name: 'Vk',
+          img: {
+            path: 'content',
+            name: 'vk-link',
+            format: 'png',
+            width: 97,
+            height: 97,
+            altText: 'Вконтакте',
+            vpMob: 800,
+          }
+        },
+        {
+          href: 'https://discord.com/invite/XJVjW2kKg6',
+          name: 'Discord',
+          img: {
+            path: 'content',
+            name: 'discord-link',
+            format: 'png',
+            width: 97,
+            height: 97,
+            altText: 'Вконтакте',
+            vpMob: 800,
+          }
+        },
+      ],
+    };
+
+  section.intro
+    +background(intro.bg)
+    .container
+      .intro__wrapper
+        +qr-codes(intro.qrCodes).intro__qrcodes
+        .intro__links
+          each link in intro.links
+            a.intro__link.btn(href=link.href)
+              span.visually-hidden !{link.name}
+              +picture-media(link.img.path, link.img.name, link.img.format, link.img.width, link.img.height, link.img.altText, link.img.vpMob)
+      .intro__content
+        h1.intro__title.title.title--h1 !{intro.title}
+        .intro__info
+          span.intro__prize-fund !{intro.prizeFound}
+          span.intro__date !{intro.date}

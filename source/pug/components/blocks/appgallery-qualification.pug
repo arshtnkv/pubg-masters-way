@@ -1,0 +1,23 @@
+mixin appgallery-qualification()
+  section.appgallery-qualification
+    h4.appgallery-qualification__title.title.title--h4 Открытая квалификация проводится для всех желающих<br> Appgallery квалификация проводится для игроков, скачавших игру из&nbsp;appgallery
+    p.appgallery-qualification__text <span class='color-red'>*</span>что нужно для участия в appgallery квалификации:
+    ul.appgallery-qualification__steps
+      li.appgallery-qualification__step
+        .appgallery-qualification__step-wrapper
+          span.appgallery-qualification__step-count 01
+          .appgallery-qualification__download
+            +btn({text: 'Скачать', href: '#', download: '#'}).btn--download.btn--bg-red
+        p.appgallery-qualification__step-text Скачайте APPGallery на&nbsp;телефон
+      li.appgallery-qualification__step
+        .appgallery-qualification__step-wrapper
+          span.appgallery-qualification__step-count 02
+          .appgallery-qualification__download
+            +btn({text: 'Скачать', href: '#', download: '#'}).btn--download.btn--bg-red
+        p.appgallery-qualification__step-text Уcтановите pubg mobile из&nbsp;APPGallery
+      li.appgallery-qualification__step
+        .appgallery-qualification__step-wrapper
+          span.appgallery-qualification__step-count 03
+          span.appgallery-qualification__step-go Go!
+        p.appgallery-qualification__step-text прими участие в квалификации
+

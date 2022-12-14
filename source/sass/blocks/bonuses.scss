@@ -1,0 +1,95 @@
+.bonuses {
+  position: relative;
+
+  & .container {
+    padding-top: 122px;
+    padding-bottom: 140px;
+
+    @include vp-767 {
+      padding-top: 41px;
+      padding-bottom: 39px;
+    }
+  }
+
+  &__bg {
+    img {
+      object-position: right;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 59px;
+
+    @include vp-767 {
+      margin-bottom: 18px;
+      font-size: 32px;
+      line-height: 31px;
+    }
+
+    span {
+      align-self: flex-end;
+
+      @include vp-767 {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 58px;
+
+    @include vp-767 {
+      margin-bottom: 8px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .title--h3 {
+      margin-bottom: 15px;
+
+      @include vp-767 {
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 2px;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 72px;
+      line-height: 38.5px;
+      font-weight: 900;
+
+      @include vp-767 {
+        font-size: 26px;
+        line-height: 27px;
+        margin-bottom: 13px;
+      }
+    }
+
+    & * {
+      margin-bottom: 9px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

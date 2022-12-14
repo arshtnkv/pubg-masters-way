@@ -1,0 +1,143 @@
+.rezult-table {
+  position: relative;
+  background-color: rgba($color-default-black, .5);
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+
+  @include vp-767 {
+    padding-top: 20px;
+  }
+
+  table {
+    width: 100%;
+    padding: 15px 15px 0 15px;
+    font-size: 18px;
+    line-height: 18px;
+    border-collapse: collapse;
+    border-radius: 0 0 15px 15px;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  thead {
+    tr {
+      min-height: 45px;
+      background-color: $color-charcoal;
+
+      @include vp-767 {
+        background-color: $color-blue-charcoal;
+      }
+    }
+  }
+
+  tr {
+    display: flex;
+    padding: 14px 20px;
+    min-height: 64px;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid $color-fuscous-grey;
+    }
+  }
+
+  td,
+  th {
+    text-align: center;
+    border-right: 1px solid $color-fuscous-grey;
+
+    &:nth-child(1) {
+      width: 11.8%;
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 30.5%;
+      @include vp-767 {
+        width: 100%;
+        border: none;
+        text-align: left;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 16%;
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    &:nth-child(4) {
+      width: 23.1%;
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    &:nth-child(5) {
+      width: 18.8%;
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  th {
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  &.is-active {
+    td,
+    th {
+      &:nth-child(2) {
+        display: none;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        display: block;
+        width: 33.3%;
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+
+  &__controls {
+    display: none;
+
+    @include vp-767 {
+      display: grid;
+      grid-template-columns: repeat(2, 40px);
+      grid-column-gap: 10px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 17px;
+      background-color: $color-blue-charcoal;
+      border-radius: 0 0 15px 15px;
+    }
+  }
+
+  .team-kills {
+    display: block;
+
+    @include vp-767 {
+      color: $color-default-white;
+    }
+  }
+}

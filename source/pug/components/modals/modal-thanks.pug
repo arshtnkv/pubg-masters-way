@@ -1,0 +1,24 @@
+mixin modal-thanks()
+  -
+    const modalBackground = {
+        path: 'content/modal',
+        name: 'bg',
+        format: 'png',
+        width: 944,
+        height: 447,
+        altText: 'background'
+    }
+  +background(modalBackground)
+  .modal__inner
+    h2.title Спасибо за регистрацию
+    .modal__link
+      +btn({
+        href: '#',
+        imgPath: 'content',
+        imgName: 'discord',
+        imgFormat: 'png',
+        imgWidth: 180,
+        imgHeight: 49,
+        imgAltText: 'content',
+      })(aria-label="Ссылка на discord канал").btn--discord-big.btn--bg-transparent.btn--image-big
+    p Наш игровой Discord, где вы&nbsp;можете задать все вопросы

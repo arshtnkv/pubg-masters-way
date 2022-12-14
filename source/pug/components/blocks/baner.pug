@@ -1,0 +1,7 @@
+mixin baner(data)
+  .baner&attributes(attributes)
+    each col in data.cols
+      .baner__col
+        h4.baner__title.title.title--h4 !{col.title}
+        span.baner__date !{col.date}
+        span.baner__month !{col.month}

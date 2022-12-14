@@ -1,0 +1,6 @@
+mixin background(img)
+  .background&attributes(attributes)
+    if img.vpMob
+      +picture-media(img.path, img.name, img.format, img.width, img.height, img.altText, img.vpMob)
+    else
+      +picture(img.path, img.name, img.format, img.width, img.height, img.altText)

@@ -1,0 +1,32 @@
+mixin accordion(data, mod)
+  if mod === "team"
+    .accordion(class!= `accordion--${mod}` data-accordion="parent" data-single data-close-inner)
+      .accordion__element.is-active(data-accordion="element")
+        button.accordion__button(type="button" data-accordion="button")
+          span.accordion__button-wrapper
+            if(data.trigger.logo)
+              +img(data.trigger.logo.path, data.trigger.logo.name, data.trigger.logo.format, data.trigger.logo.width, data.trigger.logo.height, data.trigger.logo.altText)
+            span.accordion__button-text !{data.trigger.name}
+          span.accordion__button-icon
+        .accordion__content(data-accordion="content")
+          .accordion__wrapper
+            +team-table(data)
+  if (mod === "schedule")
+    .accordion(class!= `accordion--${mod}` data-accordion="parent" data-single data-close-inner)
+      .accordion__element.is-active(data-accordion="element")
+        button.accordion__button(type="button" data-accordion="button")
+          .accordion__button-wrapper
+            span.accordion__button-text !{data.trigger.name}
+            if data.trigger.icon
+              +img(data.trigger.icon.path, data.trigger.icon.name, data.trigger.icon.format, data.trigger.icon.width, data.trigger.icon.height, data.trigger.icon.altText)
+            if data.trigger.desc
+              span.accordion__button-desc !{data.trigger.desc}
+          +icon("polygon", 8, 14)
+        .accordion__content(data-accordion="content")
+          .accordion__wrapper
+            if(data.mod === "game")
+              +schedule-table(data)
+            if(data.mod === "rezult")
+              +rezult-table(data)
+
+

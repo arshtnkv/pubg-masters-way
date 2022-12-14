@@ -1,0 +1,18 @@
+mixin slider(data, mod)
+  .slider(class!= `slider--${mod}`)&attributes(attributes)
+    .slider__container.swiper-container(data-slider=`${mod}`)
+      .slider__wrapper.swiper-wrapper
+        each item, i in data
+          .slider__item.swiper-slide
+            if(mod === 'default')
+              +faq-item(item)
+            if(mod === 'init-mobile')
+              +news-card(item)
+            if(mod === 'init-mobile-perview-two')
+              +news-card(item)
+      .slider__controls
+        button.slider__btn.slider__btn--prev(type="button", aria-label="назад")
+          +icon("arrow-left", 13, 9)
+        button.slider__btn.slider__btn--next(type="button", aria-label="вперёд")
+          +icon("arrow-right", 13, 9)
+        .slider__pagination.swiper-pagination

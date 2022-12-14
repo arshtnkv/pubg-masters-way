@@ -1,0 +1,16 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "FAQ"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = false
+  - const footerMods = ""
+  - const currentUrl = "faq.html"
+
+block main
+  main
+    +faq()
+    +news()
+    +go-to-discord()

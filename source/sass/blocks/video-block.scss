@@ -1,0 +1,23 @@
+.video-block {
+  & .container {
+    padding-top: 94px;
+    padding-bottom: 142px;
+
+    @include vp-767 {
+      padding-top: 32px;
+      padding-bottom: 33px;
+    }
+  }
+
+  &__video {
+    margin-bottom: 65px;
+
+    @include vp-767 {
+      margin-bottom: 22px;
+    }
+  }
+
+  .go-to-discord > .container {
+    padding: 0;
+  }
+}

@@ -1,0 +1,8 @@
+mixin news-card(data)
+  .news-card
+    a.news-card__link.btn(href='#')
+      .news-card__img
+        img(src='https://via.placeholder.com/325x195' width='325', height='195', alt='image')
+      h3.news-card__title.title.title--h5 !{data.title}
+      p.news-card__text !{data.text}
+      span.news-card__date !{data.date}

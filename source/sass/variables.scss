@@ -1,0 +1,33 @@
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-transparent:                 rgba(255, 255, 255, 0);
+
+$color-nero:                        #212121;
+$color-neon-blue:                   #2c39f2;
+$color-torch-red:                   #e9072b;
+$color-fire-engine-red:             #c8102e;
+$color-mandy:                       #c44458;
+$color-charcoal:                    #474747;
+$color-cod-grey:                    #333537;
+$color-fuscous-grey:                #3f3d3f;
+$color-night-rider:                 #333131;
+$color-bunker:                      #2a2b2c;
+$color-blue-charcoal:               #232527;
+$color-silver:                      #c0c0c0;
+$color-snow:                        #fcfcfc;
+
+$fz-default:                        16px;
+
+$ff-dinpro:                    "DINPro", "Arial", sans-serif;
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-600:                         0.6s $tf-default;
+
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1240:                           1280px;
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

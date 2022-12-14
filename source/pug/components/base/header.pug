@@ -1,0 +1,53 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "index.html",
+        text: "Главная"
+      },
+      {
+        href: "teams.html",
+        text: "Команды"
+      },
+      {
+        href: "schedule.html",
+        text: "Расписание"
+      },
+      {
+        href: "regulations.html",
+        text: "Правила"
+      },
+      {
+        href: "faq.html",
+        text: "FAQ"
+      },
+      {
+        href: "news.html",
+        text: "Новости"
+      },
+    ]
+
+    const logo = {
+      path: 'content',
+      name: 'logo',
+      format: 'png',
+      width: 86,
+      height: 79,
+      altText: 'Логотип компании'
+    }
+
+  header.header.header--nojs(class=headerMods)
+    .container
+      +logo(logo, currentUrl)
+      nav.main-nav
+        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+          span
+        .main-nav__wrapper
+          ul.main-nav__list
+            each link in headerLinks
+              - const activeState = currentUrl === link.href
+              li.main-nav__item
+                if(activeState)
+                  span.main-nav__link.is-active=link.text
+                else
+                  +btn({text: link.text, href: link.href})(aria-label="Ссылка")

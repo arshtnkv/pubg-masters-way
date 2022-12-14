@@ -1,0 +1,24 @@
+mixin video-block()
+  -
+    const videoData = {
+        video: {
+          width: "1165",
+          height: "655",
+          id: "player-1",
+          video:'U7EH2K0MsFU'
+        },
+        img: {
+          path: "content",
+          image: "video-cover",
+          format: "jpg",
+          width: "1165",
+          height: "655",
+          altText: "обложка для видео",
+        }
+    }
+
+  section.video-block
+    .container
+      h2.visually-hidden Видео
+      +video(videoData).video-block__video
+      +go-to-discord()

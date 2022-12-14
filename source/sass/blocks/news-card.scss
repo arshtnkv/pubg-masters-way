@@ -1,0 +1,50 @@
+.news-card {
+  &__link {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include hover-focus {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    margin-bottom: 17px;
+
+    @include vp-767 {
+      margin-bottom: 8px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    margin-bottom: 17px;
+
+    @include vp-767 {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 15px;
+
+    @include vp-767 {
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+  }
+
+  &__date {
+    font-size: 18px;
+
+    @include vp-767 {
+      font-size: 10px;
+    }
+  }
+}

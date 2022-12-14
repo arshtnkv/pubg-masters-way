@@ -1,0 +1,34 @@
+mixin bonuses()
+
+  -
+    const bonuses = {
+      title: 'Бонусы<span>За<br>регистрацию</span>',
+      list: [
+        {
+          title: 'Первые 50 команд',
+          text: `300&nbsp;UC`
+        },
+        {
+          title: 'Top-1 квалификации AppGallery',
+          text: `600&nbsp;UC`
+        }
+      ],
+      bg: {
+        path: 'content/bonuses',
+        name: 'bg-bonus',
+        format: 'png',
+        width: 1920,
+        height: 719,
+        altText: 'background'
+      }
+    }
+
+  section.bonuses
+    +background(bonuses.bg).bonuses__bg
+    .container
+      h2.bonuses__title.title.title--h1.title--color-red !{bonuses.title}
+      ul.bonuses__list
+        each item in bonuses.list
+          li.bonuses__item
+            h3.title.title--h3.title--color-red !{item.title}
+            p !{item.text}

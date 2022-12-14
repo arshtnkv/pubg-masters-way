@@ -1,0 +1,17 @@
+mixin schedule-table(data)
+  .schedule-table
+    table
+      thead
+        tr
+          each th in data.heads
+            th !{th}
+      each line in data.lines
+        tr
+          td
+            span.schedule-table__date !{line.date}
+            span.schedule-table__time !{line.time}
+          td
+            span.schedule-table__time !{line.time}
+          td
+            span.schedule-table__match !{line.match}
+

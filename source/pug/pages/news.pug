@@ -1,0 +1,17 @@
+extends ../components/base/layout
+
+block data
+  include ../data/news-cards
+
+block variables
+  - const title = "Новости"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = false
+  - const footerMods = ""
+  - const currentUrl = "news.html"
+
+block main
+  main
+    +news-page()

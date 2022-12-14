@@ -1,0 +1,49 @@
+mixin faq()
+  -
+    const faq = {
+      title: 'Faq',
+      bg: {
+        path: 'content/faq',
+        name: 'bg',
+        format: 'png',
+        width: 1920,
+        height: 1239,
+        altText: 'background'
+      },
+      list: [
+        {
+          title: '01 I что мне делать с выигрышем?',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias rem totam cumque officia modi voluptatem aut, facere voluptate nam, tenetur blanditiis error neque minus sunt eos sed adipisci magni! Quod, nesciunt harum?'
+        },
+        {
+          title: '02 I что мне делать с выигрышем?',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias rem totam cumque officia modi voluptatem aut, facere voluptate nam, tenetur blanditiis error neque minus sunt eos sed adipisci magni! Quod, nesciunt harum?'
+        },
+        {
+          title: '03 I что мне делать с выигрышем?',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias rem totam cumque officia modi voluptatem aut, facere voluptate nam, tenetur blanditiis error neque minus sunt eos sed adipisci magni! Quod, nesciunt harum?'
+        }
+      ]
+    };
+
+  section.faq
+    +background(faq.bg)
+    .container
+      h1.faq__title.title.title--h1 !{faq.title}
+      .faq__droptabs.droptabs
+        .droptabs__wrapper
+          .droptabs__dropdown
+            button.droptabs__trigger(type="button") Как принять участие?
+              +icon("polygon", 14, 7)
+            .droptabs__controls
+              button.droptabs__control.is-active(type="button") Как принять участие?
+              button.droptabs__control(type="button") Как победить в турнире?
+              button.droptabs__control(type="button") Что мне делать с выигрышем?
+        .droptabs__content
+          .droptabs__element.is-active
+            +slider(faq.list, "default")
+          .droptabs__element
+            p Как победить в турнире?
+          .droptabs__element
+            h2 Что мне делать с выигрышем?
+

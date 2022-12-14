@@ -1,0 +1,36 @@
+mixin news()
+  -
+    const news = {
+      title: 'Новости',
+      list: [
+        {
+          title: 'Расписание этапа квалификаций',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.',
+          date: '3 июля 2021'
+        },
+        {
+          title: 'Расписание этапа квалификаций',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.',
+          date: '3 июля 2021'
+        },
+        {
+          title: 'Расписание этапа квалификаций',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.',
+          date: '3 июля 2021'
+        }
+      ],
+      bg: {
+        path: 'content/news',
+        name: 'bg-news',
+        format: 'png',
+        width: 1920,
+        height: 844,
+        altText: 'background'
+      }
+    };
+
+  section.news
+    +background(news.bg)
+    .container
+      h2.title.title--h1.news__title !{news.title}
+      +slider(news.list, 'init-mobile')

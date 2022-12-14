@@ -1,0 +1,30 @@
+mixin news-page()
+  -
+    const newsPage = {
+      title: 'Новости',
+      bg: {
+        path: 'content/news',
+        name: 'bg-news',
+        format: 'png',
+        width: 1920,
+        height: 844,
+        altText: 'background'
+      },
+      subtitle: 'Расписание этапа квалификаций',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisisLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.',
+      time: '3 июля 2021'
+    };
+
+  section.news-page
+    .news-page__wrapper
+      +background(newsPage.bg)
+      .container
+        h2.title.title--h1.news-page__title !{newsPage.title}
+        .news-page__image
+          img(src='https://via.placeholder.com/800x477' width='800', height='477', alt='image')
+        h3.news-page__description-title !{newsPage.subtitle}
+        p.news-page__description-title-text !{newsPage.text}
+        span.news-page__description-title-date !{newsPage.time}
+    .news-page__list
+      .container
+        +slider(newsCard, 'init-mobile-perview-two')
