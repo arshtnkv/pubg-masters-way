@@ -12,54 +12,54 @@ mixin intro()
         height: 719,
         altText: 'background',
       },
-      qrCodes: [
-        {
-          title: 'Россия',
-          name: 'qr-rus',
-          width: 204,
-          height: 204
-        },
-        {
-          title: 'Страны снг',
-          name: 'qr-sng',
-          width: 204,
-          height: 204
-        },
-      ],
-      links: [
-        {
-          href: 'https://vk.com/gameclub_mobile',
-          name: 'Vk',
-          img: {
-            path: 'content',
-            name: 'vk-link',
-            format: 'png',
-            width: 97,
-            height: 97,
-            altText: 'Вконтакте',
-            vpMob: 800,
-          }
-        },
-        {
-          href: 'https://discord.com/invite/XJVjW2kKg6',
-          name: 'Discord',
-          img: {
-            path: 'content',
-            name: 'discord-link',
-            format: 'png',
-            width: 97,
-            height: 97,
-            altText: 'Вконтакте',
-            vpMob: 800,
-          }
-        },
-      ],
+      //- qrCodes: [
+      //-   {
+      //-     title: 'Россия',
+      //-     name: 'qr-rus',
+      //-     width: 204,
+      //-     height: 204
+      //-   },
+      //-   {
+      //-     title: 'Страны снг',
+      //-     name: 'qr-sng',
+      //-     width: 204,
+      //-     height: 204
+      //-   },
+      //- ],
+      //- links: [
+      //-   {
+      //-     href: 'https://vk.com/gameclub_mobile',
+      //-     name: 'Vk',
+      //-     img: {
+      //-       path: 'content',
+      //-       name: 'vk-link',
+      //-       format: 'png',
+      //-       width: 97,
+      //-       height: 97,
+      //-       altText: 'Вконтакте',
+      //-       vpMob: 800,
+      //-     }
+      //-   },
+      //-   {
+      //-     href: 'https://discord.com/invite/XJVjW2kKg6',
+      //-     name: 'Discord',
+      //-     img: {
+      //-       path: 'content',
+      //-       name: 'discord-link',
+      //-       format: 'png',
+      //-       width: 97,
+      //-       height: 97,
+      //-       altText: 'Вконтакте',
+      //-       vpMob: 800,
+      //-     }
+      //-   },
+      //- ],
     };
 
   section.intro
     +background(intro.bg)
     .container
-      .intro__wrapper
+      //- .intro__wrapper
         +qr-codes(intro.qrCodes).intro__qrcodes
         .intro__links
           each link in intro.links
